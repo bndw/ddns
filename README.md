@@ -4,15 +4,9 @@
 
 A quick Dynamic DNS hack for Route53. 
 
-Run the container with AWS credentials and it'll create an A record with the machine's public IP.
-
 ## Usage
 
-```
-make build
-```
-
-#### Docker
+Run the container with AWS credentials and it'll create an A record with the machine's public IP.
 
 ```sh
 docker run --rm \
