@@ -1,4 +1,4 @@
-REPO ?= bndw/dyndns
+REPO ?= bndw/ddns
 GITSHA=$(shell git rev-parse --short HEAD)
 TAG_COMMIT=$(REPO):$(GITSHA)
 TAG_LATEST=$(REPO):latest

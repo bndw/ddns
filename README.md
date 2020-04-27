@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/bndw/dyndns.svg?style=svg&circle-token=5bfd0d4685ebd3d7a086284a546b1873bfc4b1e6)](https://circleci.com/gh/bndw/dyndns)
+[![CircleCI](https://circleci.com/gh/bndw/ddns.svg?style=svg)](https://circleci.com/gh/bndw/ddns)
 
-# dyndns
+# ddns
 
 A quick Dynamic DNS hack for Route53. 
 
@@ -15,7 +15,7 @@ docker run --rm \
   -e AWS_ACCESS_KEY_ID=FIXME \
   -e AWS_SECRET_ACCESS_KEY=FIXME \
   -e AWS_REGION=FIXME \
-  bndw/dyndns:latest
+  bndw/ddns:latest
 ```
 
 #### Kubernetes CronJob
@@ -24,7 +24,7 @@ docker run --rm \
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  name: dyndns
+  name: ddns
 spec:
   schedule: "@daily"
   jobTemplate:
@@ -32,8 +32,8 @@ spec:
       template:
         spec:
           containers:
-          - name: dyndns
-            image: bndw/dyndns:latest
+          - name: ddns
+            image: bndw/ddns:latest
             env:
             - name: AWS_ACCESS_KEY_ID
               value: "FIXME"
